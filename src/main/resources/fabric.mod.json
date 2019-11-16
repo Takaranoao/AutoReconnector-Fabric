@@ -1,8 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "autoreconnector",
   "version": "${version}",
-
   "name": "Auto reconnector mod",
   "description": "Automatically reconnect when you are disconnected from the server.",
   "authors": [
@@ -10,27 +9,25 @@
   ],
   "contact": {
     "homepage": "https://takaranoao.com/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Takaranoao/AutoReconnector-Fabric"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
-  "environment": "*",
+  "license": "MIT",
+  "icon": "assets/autoreconnector/icon.png",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "com.takaranoao.mods.autoreconnector.AutoConnectorMod"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
+  "mixins": ["autoreconnector.mixins.json"],
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric": "*"
   },
   "suggests": {
     "flamingo": "*"
+  },
+  "custom": {
+    "modmenu:clientsideOnly": true
   }
 }
